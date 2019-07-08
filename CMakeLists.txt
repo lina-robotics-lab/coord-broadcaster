@@ -10,6 +10,7 @@ project(coord_broadcast)
 find_package(catkin REQUIRED COMPONENTS
  roscpp
  move_base_msgs
+ geometry_msgs
  actionlib
 )
 
@@ -109,6 +110,7 @@ catkin_package(
   CATKIN_DEPENDS
     roscpp
     move_base_msgs
+    geometry_msgs
     actionlib
 #  DEPENDS system_lib
 )
@@ -137,7 +139,8 @@ include
 ## Declare a C++ executable
 ## With catkin_make all packages are built within a single CMake context
 ## The recommended prefix ensures that target names across packages don't collide
-add_executable(${PROJECT_NAME} src/coord_broadcast.cpp)
+#add_executable(${PROJECT_NAME} src/coord_broadcast.cpp)
+add_executable(${PROJECT_NAME} src/target_broadcast.cpp)
 
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the

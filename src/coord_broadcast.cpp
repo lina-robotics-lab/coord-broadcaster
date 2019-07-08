@@ -44,9 +44,9 @@ int main(int argc, char** argv){
     ac.waitForResult();
 
     if(ac.getState() == actionlib::SimpleClientGoalState::SUCCEEDED)
-      ROS_INFO("Hooray, the base moved 1 meter forward");
+      ROS_INFO("Hooray, the base moved");
     else
-      ROS_INFO("The base failed to move forward 1 meter for some reason");
+      ROS_INFO("The base failed to move for some reason");
 
   }
 
